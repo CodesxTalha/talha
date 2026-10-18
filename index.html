@@ -589,17 +589,28 @@
             footer .wrap {
                 padding-top: 28px;
                 padding-bottom: 24px;
-                gap: 20px
+                gap: 26px
             }
 
             .foot-row {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 6px
+                gap: 6px 12px
             }
 
             .foot-row:first-child {
-                gap: 14px
+                flex-wrap: nowrap
+            }
+
+            .foot .logo {
+                font-size: 20px
+            }
+
+            .foot-links {
+                font-size: 14px;
+                gap: 12px
+            }
+
+            .foot small {
+                font-size: 11px
             }
         }
 
@@ -693,7 +704,7 @@
             </div>
             <div class="foot-row">
                 <small>© 2026 <span id="domain">talha.hs.vc</span></small>
-                <small>No AI signature found.</small>
+                <small>No slop found.</small>
             </div>
         </div>
     </footer>
