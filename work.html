@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Selected work and open-source products built by Talha.">
+    <title>Work — Talha.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="wrap nav">
+            <a class="logo" href="/">Talha.</a>
+            <div class="nav-right">
+                <nav class="menu" id="menu" aria-label="Main">
+                    <a href="about.html">About</a>
+                    <a href="work.html" aria-current="page">Work</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"
+                    aria-controls="menu"><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+        <!-- Hero -->
+        <section class="wrap hero">
+            <h1><span class="b">Selected</span> Works <span class="g">and</span> Products<br class="br-d"> <span
+                    class="g">built from scratch</span></h1>
+            <a class="mail" href="https://github.com/codesxtalha" target="_blank" rel="noopener">github.com/codesxtalha
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 13L13 3M5 3h8v8" />
+                </svg>
+            </a>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="wrap work-list" aria-label="Featured projects">
+
+            <!-- Project 01 -->
+            <article class="work-item">
+                <div class="work-thumb">
+                    <img src="images/1.webp" alt="BlockX settings interface" width="1600" height="900">
+                </div>
+                <div class="work-info">
+                    <div class="work-head">
+                        <h2>BlockX 2.0</h2>
+                        <span>2026 — Browser Extension</span>
+                    </div>
+                    <div class="work-desc">
+                        <p>An open-source content-filtering Chrome extension engineered for distraction-free browsing. Built with real-time DOM scanning, unified custom domain rules, and strict browser policy controls inside a minimal settings interface.</p>
+                        <div class="skill-tags">
+                            <span class="tag">javascript</span>
+                            <span class="tag">chrome apis</span>
+                            <span class="tag">interface design</span>
+                        </div>
+                        <a class="mail work-link" href="https://github.com/codesxtalha" target="_blank" rel="noopener">View repository
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M3 13L13 3M5 3h8v8" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 02 -->
+            <article class="work-item">
+                <div class="work-thumb">
+                    <img src="images/2.webp" alt="Editorial reader interface" width="1600" height="900" loading="lazy">
+                </div>
+                <div class="work-info">
+                    <div class="work-head">
+                        <h2>Editorial Reader</h2>
+                        <span>2026 — Interface &amp; Web App</span>
+                    </div>
+                    <div class="work-desc">
+                        <p>A distraction-free reading and visual learning environment designed around warm paper contrast, real-time typography controls, and structured financial diagrams that adapt cleanly across screen sizes.</p>
+                        <div class="skill-tags">
+                            <span class="tag">react</span>
+                            <span class="tag">typography</span>
+                            <span class="tag">ui / ux design</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 03 -->
+            <article class="work-item">
+                <div class="work-thumb">
+                    <img src="images/3.webp" alt="Variable font playground" width="1600" height="804" loading="lazy">
+                </div>
+                <div class="work-info">
+                    <div class="work-head">
+                        <h2>Type Specimen Studio</h2>
+                        <span>2025 — Design Tool</span>
+                    </div>
+                    <div class="work-desc">
+                        <p>An interactive variable-font playground built for testing optical sizing, weight axes, kerning pairs, and editorial hierarchy directly in the browser with zero latency.</p>
+                        <div class="skill-tags">
+                            <span class="tag">typescript</span>
+                            <span class="tag">variable fonts</span>
+                            <span class="tag">minimal ui</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 04 -->
+            <article class="work-item">
+                <div class="work-thumb">
+                    <img src="images/4.webp" alt="Kitten TTS voice synthesis studio" width="1600" height="804" loading="lazy">
+                </div>
+                <div class="work-info">
+                    <div class="work-head">
+                        <h2>Kitten TTS Studio</h2>
+                        <span>2026 — AI Web Interface</span>
+                    </div>
+                    <div class="work-desc">
+                        <p>A clean, local-first web studio for testing lightweight text-to-speech synthesis models. Features voice preset switching, speed modulation, and an instant generation history queue without clutter.</p>
+                        <div class="skill-tags">
+                            <span class="tag">python</span>
+                            <span class="tag">fastapi</span>
+                            <span class="tag">voice synthesis</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Other Engineering & Code Archive -->
+        <section class="wrap about-block" aria-label="More projects">
+            <h2 class="small-label">More engineering &amp; experiments</h2>
+            <div class="archive-list">
+                <div class="archive-row">
+                    <div class="archive-title">
+                        <strong>WebCodecs Video Engine</strong>
+                        <span>Client-side 60 FPS short-form MP4 rendering engine built in React &amp; Canvas API.</span>
+                    </div>
+                    <span class="archive-meta">React · WebCodecs · 2026</span>
+                </div>
+                <div class="archive-row">
+                    <div class="archive-title">
+                        <strong>LingoQuest</strong>
+                        <span>Full-stack interactive language learning platform with progress tracking.</span>
+                    </div>
+                    <span class="archive-meta">Python · Django · 2024</span>
+                </div>
+                <div class="archive-row">
+                    <div class="archive-title">
+                        <strong>GatherHub</strong>
+                        <span>Community event management and scheduling web application.</span>
+                    </div>
+                    <span class="archive-meta">Python · Full-Stack · 2024</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clean Editorial Closing -->
+        <section class="wrap about-cta">
+            <h2>Have a project in mind? <span class="g">Let’s cook something together.</span></h2>
+            <a class="mail" href="contact.html">Start a conversation
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 13L13 3M5 3h8v8" />
+                </svg>
+            </a>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <div class="wrap">
+            <div class="foot-row">
+                <a class="logo" href="/">Talha.</a>
+                <nav class="foot-links" aria-label="Social"><a href="https://github.com/codesxtalha"
+                        target="_blank">Github</a><a href="https://instagram.com/talhaxcodes"
+                        target="_blank">Instagram</a></nav>
+            </div>
+            <div class="foot-row">
+                <small>© 2026 <span id="domain">talha.hs.vc</span></small>
+                <small>Made with &nbsp; ❤︎ &nbsp;by Talha.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -18,7 +18,7 @@
         });
     }
 
-    // Contact Modal
+    // Home Page Contact Modal
     var overlay = document.getElementById('overlay');
     var form = document.getElementById('form');
     var trigger = document.getElementById('trigger');
@@ -60,6 +60,20 @@
             window.location.href = 'mailto:talhaxcodes@proton.me?subject=' + encodeURIComponent('Message from ' + f.name.value) + '&body=' + encodeURIComponent(body);
             form.reset();
             closeModal();
+        });
+    }
+
+    // Dedicated Contact Page Form
+    var contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var f = contactForm.elements;
+            var topic = f.topic ? f.topic.value : 'Project Inquiry';
+            var subject = topic + ' — ' + f.name.value;
+            var body = 'Hi Talha,\n\nI’m ' + f.name.value + ' (' + f.email.value + ').\nTopic: ' + topic + '\n\n' + f.message.value;
+            window.location.href = 'mailto:talhaxcodes@proton.me?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            contactForm.reset();
         });
     }
 
