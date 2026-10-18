@@ -332,45 +332,47 @@
         /* Footer */
         footer {
             margin-top: var(--gap);
-            background: #1b1b1b;
-            color: #d8d8d8
+            border-top: 1px solid #e6e6e6;
+            background: #fff
         }
 
-        .foot {
-            padding-top: 34px;
-            padding-bottom: 30px;
-            display: grid;
-            gap: 42px
+        footer .wrap {
+            padding-top: 32px;
+            padding-bottom: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px
         }
 
         .foot-row {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            gap: 16px;
+            align-items: center;
+            gap: 12px 24px;
             flex-wrap: wrap
         }
 
         .foot .logo {
-            color: #d8d8d8;
-            font-size: 24px
+            font-size: 24px;
+            line-height: 1;
+            color: var(--gray);
+            letter-spacing: -.04em
         }
 
-        .foot nav {
+        .foot-links {
             display: flex;
             gap: 15px;
             font-size: 16px;
             font-weight: 400
         }
 
-        .foot nav a:hover {
+        .foot-links a:hover {
             opacity: .7
         }
 
         .foot small {
-            font-size: 12px;
+            font-size: 13px;
             color: var(--gray);
-            font-weight: 400;
             letter-spacing: -.02em
         }
 
@@ -584,17 +586,20 @@
                 width: 100%
             }
 
-            .foot .logo {
-                font-size: 20px
+            footer .wrap {
+                padding-top: 28px;
+                padding-bottom: 24px;
+                gap: 20px
             }
 
-            .foot nav {
-                font-size: 14px;
-                gap: 12px
+            .foot-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px
             }
 
-            .foot small {
-                font-size: 11px
+            .foot-row:first-child {
+                gap: 14px
             }
         }
 
@@ -679,14 +684,15 @@
         </section>
     </main>
 
-    <footer>
-        <div class="wrap foot">
+    <footer class="foot">
+        <div class="wrap">
             <div class="foot-row">
                 <span class="logo">Talha.</span>
-                <nav aria-label="Social"><a href="#">Github</a><a href="#">Linkedin</a><a href="#">Instagram</a></nav>
+                <nav class="foot-links" aria-label="Social"><a href="#">Github</a><a href="#">Linkedin</a><a
+                        href="#">Instagram</a></nav>
             </div>
             <div class="foot-row">
-                <small>© 2026 talha.github.io</small>
+                <small>© 2026 <span id="domain">talha.hs.vc</span></small>
                 <small>No AI signature found.</small>
             </div>
         </div>
@@ -739,6 +745,10 @@
                 window.location.href = 'mailto:talhaxcodes@proton.me?subject=' + encodeURIComponent('Message from ' + f.name.value) + '&body=' + encodeURIComponent(body);
                 form.reset(); closeModal();
             });
+
+            // Footer domain: use the real hostname; keep talha.hs.vc on localhost, IPs or file://
+            var dom = document.getElementById('domain'), host = location.hostname.replace(/^www\./, '');
+            if (dom && /^([a-z0-9-]+\.)+[a-z]{2,}$/i.test(host)) dom.textContent = host;
         })();
     </script>
 </body>
