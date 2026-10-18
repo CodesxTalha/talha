@@ -8,7 +8,7 @@
     <title>Talha.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
             --gap: clamp(56px, 8vw, 100px);
@@ -176,7 +176,7 @@
 
         .hero h1 {
             margin: 0;
-            font-weight: normal;
+            font-weight: 500;
             font-size: clamp(31px, 5vw, 50px);
             line-height: 1.26;
             letter-spacing: -2px
@@ -492,6 +492,10 @@
         }
 
         @media (max-width:760px) {
+            .hero h1 {
+                letter-spacing: -1px
+            }
+
             .br-d {
                 display: none
             }
