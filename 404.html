@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>404 — Talha.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gray: #828282;
+            --text: #4c4c4c;
+            --bubble: #efefef;
+            --blue: #0a6cf0;
+            --btn: #5c5c5c
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            color: #000;
+            font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 400;
+            letter-spacing: -.03em;
+            line-height: 1.3;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        img {
+            display: block;
+            max-width: 100%
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: 1048px;
+            margin: 0 auto;
+            padding: 0 24px
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--blue);
+            outline-offset: 3px
+        }
+
+        /* Header */
+        .nav {
+            padding-top: 40px;
+            min-height: 81px
+        }
+
+        .logo {
+            font-size: 30px;
+            line-height: 41px;
+            color: var(--gray);
+            letter-spacing: -.04em
+        }
+
+        /* Main */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: var(--gap, clamp(40px, 8vw, 80px)) 0
+        }
+
+        .code {
+            margin: 0 0 clamp(24px, 5vw, 40px) -.04em;
+            font-weight: 300;
+            font-size: clamp(110px, 26vw, 240px);
+            line-height: .8;
+            letter-spacing: -.07em;
+            color: #ececec;
+            user-select: none;
+        }
+
+        .chat {
+            display: grid;
+            grid-template-columns: 50px minmax(0, 1fr);
+            gap: 8px;
+            align-items: start
+        }
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 20px;
+            background: #dff6ff;
+            overflow: hidden
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .msgs {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            min-width: 0
+        }
+
+        .bubble {
+            margin: 0;
+            padding: 12px 20px;
+            background: var(--bubble);
+            color: var(--text);
+            font-size: 18px;
+            line-height: 1.4;
+            border-radius: 20px 20px 20px 4px;
+            overflow-wrap: anywhere;
+        }
+
+        .bubble .path {
+            color: var(--blue)
+        }
+
+        .actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 6px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            height: 50px;
+            padding: 0 24px;
+            border-radius: 20px;
+            font-size: 18px;
+            background: var(--bubble);
+            color: var(--text);
+            transition: transform .25s cubic-bezier(.4, 0, .2, 1), background .2s, color .2s;
+        }
+
+        .btn.primary {
+            background: var(--blue);
+            color: #fff
+        }
+
+
+        .btn.primary:hover {
+            background: #3f3f3f
+        }
+
+        .btn:not(.primary):hover {
+            background: #e6e6e6
+        }
+
+        .btn svg {
+            width: 18px;
+            height: 18px
+        }
+
+        /* Entrance */
+        .pop {
+            animation: pop .5s cubic-bezier(.2, .8, .2, 1) both
+        }
+
+        .d1 {
+            animation-delay: .1s
+        }
+
+        .d2 {
+            animation-delay: .5s
+        }
+
+        .d4 {
+            animation-delay: 1s
+        }
+
+        @keyframes pop {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 12px, 0)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #e6e6e6;
+            background: #fff
+        }
+
+        footer .wrap {
+            padding-top: 32px;
+            padding-bottom: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px
+        }
+
+        .foot-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px 24px;
+            flex-wrap: wrap
+        }
+
+        .foot .logo {
+            font-size: 24px;
+            line-height: 1
+        }
+
+        .foot-links {
+            display: flex;
+            gap: 15px;
+            font-size: 16px
+        }
+
+        .foot-links a:hover {
+            opacity: .7
+        }
+
+        .foot small {
+            font-size: 13px;
+            color: var(--gray);
+            letter-spacing: -.02em
+        }
+
+        @media (max-width:760px) {
+            .wrap {
+                padding: 0 18px
+            }
+
+            .nav {
+                padding-top: 24px;
+                min-height: 60px
+            }
+
+            .logo {
+                font-size: 20px;
+                line-height: 32px
+            }
+
+            .chat {
+                grid-template-columns: 40px minmax(0, 1fr)
+            }
+
+            .avatar {
+                width: 40px;
+                height: 40px;
+                border-radius: 16px
+            }
+
+            .bubble {
+                font-size: 16px;
+                padding: 10px 16px;
+                border-radius: 18px 18px 18px 4px
+            }
+
+            .btn {
+                height: 46px;
+                padding: 0 20px;
+                font-size: 16px
+            }
+
+            footer .wrap {
+                padding-top: 28px;
+                padding-bottom: 24px;
+                gap: 26px
+            }
+
+            .foot-row {
+                gap: 6px 12px
+            }
+
+            .foot-row:first-child {
+                flex-wrap: nowrap
+            }
+
+            .foot .logo {
+                font-size: 20px
+            }
+
+            .foot-links {
+                font-size: 14px;
+                gap: 12px
+            }
+
+            .foot small {
+                font-size: 11px
+            }
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+            * {
+                animation: none !important;
+                transition: none !important
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="wrap nav"><a class="logo" href="/">Talha.</a></div>
+    </header>
+
+    <main class="wrap">
+        <h1 class="code pop" aria-label="Error 404">404</h1>
+        <div class="chat">
+            <div class="avatar pop d1"><img src="/images/avatar.webp" alt="" width="100" height="100"
+                    onerror="this.remove()"></div>
+            <div class="msgs">
+                <p class="bubble pop d1">Hmm, that page doesn’t exist.</p>
+                <p class="bubble pop d2">Nothing lives at <span class="path" id="path">this address</span>. The link
+                    might be broken, or I moved things around.</p>
+                <div class="actions pop d4">
+                    <a class="btn primary" href="/">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M19 12H5M11 6l-6 6 6 6" />
+                        </svg>
+                        Back to home
+                    </a>
+                    <a class="btn" href="mailto:talhaxcodes@proton.me">Say hello</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="foot">
+        <div class="wrap">
+            <div class="foot-row">
+                <a class="logo" href="/">Talha.</a>
+                <nav class="foot-links" aria-label="Social"><a href="https://github.com/codesxtalha" target="_blank">Github</a><a href="https://instagram.com/talhaxcodes" target="_blank">Instagram</a></nav>
+            </div>
+            <div class="foot-row">
+                <small>© 2026 <span id="domain">talha.hs.vc</span></small>
+                <small>Made with&nbsp; ❤︎ &nbsp;by Talha.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            // Show the address that was not found
+            var p = document.getElementById('path'), path = (location.pathname + location.search).replace(/\/index\.html$/, '/');
+            if (p && path && path !== '/') p.textContent = path.length > 48 ? path.slice(0, 45) + '…' : path;
+
+            // Footer domain: real hostname, falls back to talha.hs.vc
+            var dom = document.getElementById('domain'), host = location.hostname.replace(/^www\./, '');
+            if (dom && /^([a-z0-9-]+\.)+[a-z]{2,}$/i.test(host)) dom.textContent = host;
+        })();
+    </script>
+</body>
+
+</html>
